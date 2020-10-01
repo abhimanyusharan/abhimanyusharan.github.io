@@ -1,9 +1,13 @@
 function action(e){
     //Removing existing active and showsect classes
-    li_existing = document.getElementsByClassName("active")[0];
-    li_existing.classList.remove("active");
-    sect_existing = document.getElementsByClassName("showsect")[0];
-    sect_existing.classList.remove("showsect");
+    try {
+        li_existing = document.getElementsByClassName("active")[0];
+        li_existing.classList.remove("active");
+    }
+    try {
+        sect_existing = document.getElementsByClassName("showsect")[0];
+        sect_existing.classList.remove("showsect");
+    }
 
     //Adding active class to the clicked element's li. [1]=li
     e.path[1].classList.add("active");
@@ -18,5 +22,6 @@ function action(e){
 
 var arr = document.querySelectorAll("#intro li a");
 for (var a of arr){
+    if (a == arr[arr.length - 1]){break;}
 	a.addEventListener("click", action);
 }
