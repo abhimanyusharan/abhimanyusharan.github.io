@@ -1,9 +1,29 @@
-#name{
+#header{
   display: block;
+}
+
+#name{
   font-size: 2em;
   font-weight: bold;
-  text-align: center;
+  float: left;
 }
+
+#intro{
+  float: right;
+}
+
+.clr{
+  clear:both;
+}
+
+.sect {
+  max-width: 1280px;
+  padding: 10px 180px;
+}
+
+@media (max-width: 767px) {
+	.sect { padding: 60px 20px; min-width: 280px; }
+	}
 
 .sect .title{
   display: block;
@@ -23,6 +43,8 @@
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+  float: left;
+  width: 25%;
 }
 
 .sect .intro {
@@ -33,4 +55,12 @@
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+  float: right;
 }
+
+.sect .content {
+  display: block;
+  float: right;
+  width: 70%;
+}
+
