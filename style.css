@@ -1,5 +1,8 @@
 #header{
   display: block;
+
+  top: 0;
+  width: 100%;
 }
 
 #name{
@@ -15,13 +18,16 @@
 #intro ul {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 0px;
   list-style: none;
 }
 
 #intro li {
-  margin-left: 15px;
-  margin-right: 15px;
+  margin: 15px;
+}
+
+#intro a {
+  font-weight: bold;
 }
 
 .clr{
@@ -31,6 +37,7 @@
 .sect {
   max-width: 1280px;
   opacity: 0;
+  display: none;
   padding: 10px 180px;
   position: absolute;
 }
@@ -41,6 +48,7 @@
 
 .showsect {
   opacity: 1;
+  display: block;
 }
 
 .sect .title{
