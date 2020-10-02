@@ -8,7 +8,13 @@ function action(e){
 
     //Adding showsect class to the clicked element's href
     sect_href = e.newURL || e.target.URL;
-    sect_id = sect_href.substring(sect_href.indexOf('#') + 1);
+    hash_index = sect_href.indexOf('#');
+    if (hash_index==-1) {
+        sect_id = "about";
+    }
+    else {
+        sect_id = sect_href.substring(hash_index + 1);
+    }
     sect_element = document.getElementById(sect_id);
     sect_element.classList.add("showsect");
 
