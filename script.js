@@ -24,7 +24,23 @@ function action(e){
     a_element.classList.add("active");
 
     history.replaceState(null, document.title, location.pathname + location.search);
+
+    var x = document.querySelector("#intro ul");
+    if(x.classList.contains("ham")) {
+        x.classList.remove("ham");
+    }
+}
+
+function activateNav(e) {
+  var x = document.querySelector("#intro ul");
+  if(x.classList.contains("ham")) {
+    x.classList.remove("ham");
+  }
+  else {
+    x.classList.add("ham");
+  }
 }
 
 document.body.onload=action;
+document.getElementsByClassName('icon')[0].addEventListener("click", activateNav);
 window.addEventListener("hashchange", action);
