@@ -22,6 +22,8 @@ function action(e){
     href_value = "#"+sect_id;
     a_element = document.querySelector("[href=" + CSS.escape(href_value) + "]");
     a_element.classList.add("active");
+
+    history.replaceState(null, document.title, location.pathname + location.search);
 }
 
 document.body.onload=action;
