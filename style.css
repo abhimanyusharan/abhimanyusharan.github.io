@@ -62,34 +62,6 @@ html, body{
   clear:both;
 }
 
-@media (max-width: 767px) {
-    #name{
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      padding: 0;
-    }
-
-    #intro a.icon {
-      display: block;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-    }
-
-    #intro ul{
-      display: none;
-    }
-
-    #intro ul.ham {
-      display: block;
-      margin: 0;
-
-      list-style: none;
-    }
-
-	}
-
 .sect {
   max-width: 1280px;
   opacity: 0;
@@ -144,27 +116,99 @@ html, body{
   width: 70%;
 }
 
+#footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to top left, #ff6600 0%, #ffcc99 100%);
+}
+
+#footer .contact-sect{
+    margin: 15px 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer .social-links {
+    float: left;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 2px solid;
+}
+
+#footer .social-links a{
+    color: black;
+    font-size: 2em;
+    padding: 5px;
+}
+
 @media (max-width: 767px) {
-	.sect { padding: 60px 20px; min-width: 280px; }
-	.sect .title{
-      font-size: 1em;
-      text-align: center;
-    }
+        #name{
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding: 0;
+        }
 
-    .sect .sub-title {
-      font-size: 1em;
-      clear: left;
-      width: 100%;
-    }
+        #intro a.icon {
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
 
-    .sect .intro {
-      font-size: 1em;
-      clear: right;
-      width: 100%;
-    }
+        #intro ul{
+          display: none;
+        }
 
-    .sect .content {
-      clear: right;
-      width: 100%;
-    }
+        #intro ul.ham {
+          display: block;
+          margin: 0;
+          list-style: none;
+        }
+
+        .sect {
+          padding: 60px 20px;
+          min-width: 280px;
+        }
+
+        .sect .title{
+          font-size: 1em;
+          text-align: center;
+        }
+
+        .sect .sub-title {
+          font-size: 1em;
+          clear: left;
+          width: 100%;
+        }
+
+        .sect .intro {
+          font-size: 1em;
+          clear: right;
+          width: 100%;
+        }
+
+        .sect .content {
+          clear: right;
+          width: 100%;
+        }
+
+        #footer .contact-sect{
+            display: block;
+            text-align: center;
+        }
+
+        #footer .social-links {
+            float: none;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        #footer .social-links a {
+            font-size: 1.2em;
+        }
+
+
 	}
