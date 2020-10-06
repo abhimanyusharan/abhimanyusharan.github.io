@@ -109,6 +109,8 @@ html, body{
   font-weight: bold;
   float: right;
   width: 70%;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ff6600;
 }
 
 .sect .content {
@@ -147,7 +149,7 @@ html, body{
     padding: 5px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1045px) {
         #name{
           display: flex;
           justify-content: center;
