@@ -83,6 +83,7 @@ html, body{
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .sect .sect-left {
@@ -97,13 +98,30 @@ html, body{
   width: 70%;
 }
 
+.profile-left {
+  display: inline-block;
+  float: left;
+  width: 25%;
+  color: #ff6600;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.profile-right {
+  display: block;
+  float: right;
+  width: 70%;
+  margin-bottom: 5px;
+}
+
 .sect .sub-title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-top: 0.83em;
-  margin-bottom: 0;
+  margin-bottom: 0.25em;
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+  overflow-wrap: break-word;
 }
 
 .sect .duration{
@@ -123,10 +141,18 @@ html, body{
   border-bottom: 2px solid #ff6600;
 }
 
+.sect .content {
+  text-align: justify;
+}
+
 #about img {
-    height: 16em;
+    width: 100%;
     margin: 10px;
     border: 1px solid #ff6600;
+}
+
+#about .title {
+    text-transform: none;
 }
 
 #footer {
@@ -191,6 +217,7 @@ html, body{
         .sect .title{
           font-size: 1em;
           text-align: center;
+          text-decoration: underline;
         }
 
         .sect .sect-left {
