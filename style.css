@@ -155,6 +155,23 @@ html, body{
     text-transform: none;
 }
 
+.sect .content li{
+    padding-bottom: 5px;
+}
+
+.sect .content a{
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 #footer {
     position: fixed;
     width: 100%;
@@ -252,6 +269,7 @@ html, body{
 
         #about img {
           display: block;
+          width: auto;
           margin-left: auto;
           margin-right: auto;
         }
