@@ -250,6 +250,7 @@ html, body{
         .sect .sub-title {
           font-size: 1em;
           display: inline;
+          margin-top: 2em;
         }
 
         .sect .sub-title::before {
@@ -261,6 +262,14 @@ html, body{
           float: right;
         }
 
+        .sect .duration br {
+          content:' ';;
+        }
+
+        .sect .duration br:after {
+          content: '; ';
+        }
+
         .sect .intro {
           font-size: 1em;
           border-bottom: none;
@@ -269,7 +278,7 @@ html, body{
 
         #about img {
           display: block;
-          width: auto;
+          width: 200px;
           margin-left: auto;
           margin-right: auto;
         }
