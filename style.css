@@ -103,6 +103,8 @@ html, body{
   float: left;
   width: 25%;
   color: #ff6600;
+  text-align: left;
+  margin-right: 5px;
   margin-bottom: 5px;
   font-weight: bold;
 }
@@ -170,6 +172,14 @@ html, body{
 
 .bold {
     font-weight: bold;
+}
+
+.publication {
+    display: block;
+    margin: 15px;
+    text-align: left;
+    color: #ff6600;
+    font-size: 0.8em;
 }
 
 #footer {
