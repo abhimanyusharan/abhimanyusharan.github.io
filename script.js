@@ -29,6 +29,7 @@ function action(e){
     if(x.classList.contains("ham")) {
         x.classList.remove("ham");
     }
+    
 }
 
 function activateNav(e) {
@@ -41,6 +42,57 @@ function activateNav(e) {
   }
 }
 
+function run_color_picker(e){
+  // Colors list
+  let colors_list = [
+    ["#ff3333","#ffcccc"],  //red
+    ["#ff6600", "#ffcc99"], //orange
+    ["#0066ff", "#99ccff"], //blue
+    ["#009900","#99e699"],  //green
+    ["#ffcc00","#fff0b3"],  //yellow
+    ["#00bfff","#b3ecff"],  //light blue
+    ["#808080","#cccccc"],  //grey
+  ];
+
+  // Insert color dots
+  let locations = document.getElementsByClassName("color-picker");
+  for (let i = 0; i < locations.length; i++) {
+    for(let j = 0; j < colors_list.length; j++){
+      insert_color_picker(colors_list[j][0],locations[i]);
+    }
+  }
+
+  // Adding event listeners to dots to change color  
+  let dots = document.getElementsByClassName("picker");
+  for (let i = 0; i < dots.length; i++) {
+    color_index = i%colors_list.length;
+    dots[i].addEventListener('click', change_color.bind(null,colors_list[color_index]));
+  }
+
+}
+
+function insert_color_picker(color,location){
+  // console.log("Inserting color: "+color);
+  
+    // Create dots and set attributes
+    let ele = document.createElement("span");
+    ele.className="dot picker";
+    ele.style.backgroundColor = color;
+    location.appendChild(ele); // Adds element to HTML file
+  
+}
+
+function change_color(colors) {
+  // console.log("Updating color to: "+colors[0]);
+  document.body.style.setProperty('--my-color', colors[0]);
+  let header_color = "linear-gradient(to top left, "+colors[0]+" 0%, "+colors[1]+" 100%)";
+  document.body.style.setProperty('--header-color', header_color);
+}
+
+
 document.body.onload=action;
+document.body.onload=run_color_picker;
 document.getElementsByClassName('icon')[0].addEventListener("click", activateNav);
 window.addEventListener("hashchange", action);
+
+

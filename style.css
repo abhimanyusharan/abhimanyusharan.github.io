@@ -349,3 +349,11 @@ html, body{
             font-size: 1.2em;
         }
 	}
+
+  .dot {
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2px;
+  }
